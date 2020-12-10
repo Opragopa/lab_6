@@ -4,7 +4,7 @@
 #include "isReal.h"
 
 
-//числа, например: 1.324876E+2 и 46542E-10 должны вывести "ДА"
+//С‡РёСЃР»Р°, РЅР°РїСЂРёРјРµСЂ: 1.324876E+2 Рё 46542E-10 РґРѕР»Р¶РЅС‹ РІС‹РІРµСЃС‚Рё "Р”Рђ"
 
 int main()
 {
@@ -20,11 +20,11 @@ int main()
             std::cout << str << '\n';
             if (isFloatingPoint(str) || isMantissa2(str))
             {
-                std::cout << "ДА\n";
+                std::cout << "Г„ГЂ\n";
             }
             else
             {
-                std::cout << "НЕТ\n";
+                std::cout << "ГЌГ…Г’\n";
             }
         }
         catch (StrException& err)
@@ -37,6 +37,6 @@ int main()
 
     std::string test = "E+3";
     int e = test.find('E', 0);
-    std::cout << "test.length() = " << test.length() << " Символов после E = " << (test.length() - (e + 1));
+    std::cout << "test.length() = " << test.length() << " Г‘ГЁГ¬ГўГ®Г«Г®Гў ГЇГ®Г±Г«ГҐ E = " << (test.length() - (e + 1));
     return 0;
 }
