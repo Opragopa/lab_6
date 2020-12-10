@@ -31,16 +31,14 @@ bool isMantissa(std::string str)
 
 bool isMantissa2(std::string str)
 {
-    //начинаю делать 21:31
     int e = str.find('E', 0);
-    if (e != -1 && (isInteger(str.substr(0, e)) && !(str.substr(0, e) == "")) //проверка до буквы E
-        && isOrder(str.substr(e + 1, str.length() - e)) && !(str.substr(e, str.length()- (e+1)) == "")) // проверка после буквы E
+    if (e != -1 && (isInteger(str.substr(0, e)) && !(str.substr(0, e) == "")) //РїСЂРѕРІРµСЂРєР° РґРѕ Р±СѓРєРІС‹ E
+        && isOrder(str.substr(e + 1, str.length() - e)) && !(str.substr(e, str.length()- (e+1)) == "")) // РїСЂРѕРІРµСЂРєР° РїРѕСЃР»Рµ Р±СѓРєРІС‹ E
     {
         return true;
     }
     return false;
-    //время 19:08
-} //время, когда доделал - 22:23
+} 
 
 bool isOrder(std::string str)
 {
